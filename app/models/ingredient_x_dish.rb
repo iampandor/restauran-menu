@@ -1,0 +1,2 @@
+class IngredientXDish < ApplicationRecord
+end

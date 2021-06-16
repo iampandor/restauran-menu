@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ingredientx Tags</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ingredient</th>
+      <th>Ingredient tag</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ingredientx_tags.each do |ingredientx_tag| %>
+      <tr>
+        <td><%= ingredientx_tag.ingredient_id %></td>
+        <td><%= ingredientx_tag.ingredient_tag_id %></td>
+        <td><%= link_to 'Show', ingredientx_tag %></td>
+        <td><%= link_to 'Edit', edit_ingredientx_tag_path(ingredientx_tag) %></td>
+        <td><%= link_to 'Destroy', ingredientx_tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ingredientx Tag', new_ingredientx_tag_path %>

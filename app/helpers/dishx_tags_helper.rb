@@ -1,0 +1,2 @@
+module DishxTagsHelper
+end

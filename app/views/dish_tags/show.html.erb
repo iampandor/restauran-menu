@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dish_tag.name %>
+</p>
+
+<p>
+  <strong>Tagtype:</strong>
+  <%= @dish_tag.tagType %>
+</p>
+
+<%= link_to 'Edit', edit_dish_tag_path(@dish_tag) %> |
+<%= link_to 'Back', dish_tags_path %>

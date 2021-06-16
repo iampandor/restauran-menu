@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dish Tags</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Tagtype</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dish_tags.each do |dish_tag| %>
+      <tr>
+        <td><%= dish_tag.name %></td>
+        <td><%= dish_tag.tagType %></td>
+        <td><%= link_to 'Show', dish_tag %></td>
+        <td><%= link_to 'Edit', edit_dish_tag_path(dish_tag) %></td>
+        <td><%= link_to 'Destroy', dish_tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dish Tag', new_dish_tag_path %>

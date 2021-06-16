@@ -1,0 +1,2 @@
+class IngredientxTag < ApplicationRecord
+end

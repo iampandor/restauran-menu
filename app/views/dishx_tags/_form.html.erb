@@ -1,0 +1,27 @@
+<%= form_with(model: dishx_tag, local: true) do |form| %>
+  <% if dishx_tag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dishx_tag.errors.count, "error") %> prohibited this dishx_tag from being saved:</h2>
+
+      <ul>
+        <% dishx_tag.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dish_id %>
+    <%= form.number_field :dish_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dish_tag_id %>
+    <%= form.number_field :dish_tag_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
